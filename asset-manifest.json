@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Koska-radio/koska/static/css/main.4abbe626.css",
-    "main.js": "/Koska-radio/koska/static/js/main.b5bcecd7.js",
-    "static/media/koska.JPG": "/Koska-radio/koska/static/media/koska.babc9b8b10684d248389.JPG",
-    "index.html": "/Koska-radio/koska/index.html",
-    "main.4abbe626.css.map": "/Koska-radio/koska/static/css/main.4abbe626.css.map",
-    "main.b5bcecd7.js.map": "/Koska-radio/koska/static/js/main.b5bcecd7.js.map"
+    "main.css": "/koska/static/css/main.4abbe626.css",
+    "main.js": "/koska/static/js/main.994ae345.js",
+    "static/media/koska.JPG": "/koska/static/media/koska.babc9b8b10684d248389.JPG",
+    "index.html": "/koska/index.html",
+    "main.4abbe626.css.map": "/koska/static/css/main.4abbe626.css.map",
+    "main.994ae345.js.map": "/koska/static/js/main.994ae345.js.map"
   },
   "entrypoints": [
     "static/css/main.4abbe626.css",
-    "static/js/main.b5bcecd7.js"
+    "static/js/main.994ae345.js"
   ]
 }
