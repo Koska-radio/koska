@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap');
+
+
+body {
+    font-family: 'Space Mono', monospace; 
+    background-color: black;
+    color: rgb(212, 206, 206);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10%;
+    justify-content: space-between;
+    position: relative;  /* New property for positioning the marquee */
+}
+
+.right-section {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 10%;
+    position: relative;
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.left-section, .right-section {
+    box-sizing: border-box; /* to include padding and borders in the total width/height */
+}
+
+
+.footer-header {
+    font-family: 'Rock Salt', cursive;
+    font-size: 110px;
+    margin-bottom: 20px;
+    margin-top: 10%;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;   
+}
+
+.play-button {
+    font-size: 100px;
+    border: 0px solid rgb(174, 153, 153);
+    background: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 1%;
+    padding: 5%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marquee {
+    font-family: 'Open Sans', cursive;
+    width: 100%; 
+    display: flex;
+    height: 45px;
+    overflow: hidden;
+    position: absolute;
+    top: 5%;
+    line-height: 50px;
+    background-color: black;
+    color: white; 
+    margin-bottom: 20px;
+    border: 1px  solid white;
+}
+
+.marquee span {
+    font-size: 30px;
+    width: 50%;
+    flex: none;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    position: relative;  /* to position the pseudo-element relative to the span */
+}
+
+.marquee span.duplicated::before {
+    content: '•';
+    font-size: 50px;
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: -30px;  /* Adjust based on your desired spacing */
+    transform: translateY(-50%);
+    animation: blink 1s infinite;
+}
+
+.marquee span:after {
+    content: " \00a0\00a0\00a0"; 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+
+.residents {
+    font-family: 'Open Sans', cursive;
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.residents ul {
+    font-family: 'Space Mono';    
+    font-size: 18px;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.residents a {
+    color: white;
+    text-decoration: none;
+    line-height: 1.3;
+    display: block;
+    margin: 3px 0;
+}
+
+.koska-logo {
+    width: 180%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    z-index: 10;
+}
+
+
+.contact-section {
+    font-family: 'Space Mono', monospace;
+    
+    font-size: 20px;  /* Adjust size as needed */
+    padding-top: 10px;  /* Optional padding for better spacing */
+}
+
+.contact-section h2 {
+    font-size: 30px;  /* Adjust header size as needed */
+    margin-bottom: 10px;  /* Optional margin for better spacing */
+}
+
+.contact-section a {
+    color: white;
+    text-decoration: none;
+    line-height: 1.3;
+    display: block;
+    margin: 3px 0;
+}
+
+.spline-container {
+    width: 800px;    /* Adjust based on your sphere's size */
+    height: 800px;   /* Adjust based on your sphere's size */
+    overflow: clip; /* This ensures anything outside the set width/height is hidden */
+    position: relative; 
+    margin: auto; /* Centering the container, can be adjusted */
+}
+
+/* Ensure the Spline component scales to fill its container */
+.spline-container > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%); /* Centering the content */
+}
+
+
