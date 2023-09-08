@@ -1,14 +1,24 @@
 {
   "files": {
-    "main.css": "/koska/static/css/main.4abbe626.css",
-    "main.js": "/koska/static/js/main.994ae345.js",
-    "static/media/koska.JPG": "/koska/static/media/koska.babc9b8b10684d248389.JPG",
-    "index.html": "/koska/index.html",
-    "main.4abbe626.css.map": "/koska/static/css/main.4abbe626.css.map",
-    "main.994ae345.js.map": "/koska/static/js/main.994ae345.js.map"
+    "main.css": "/static/css/main.277963b6.css",
+    "main.js": "/static/js/main.f952e9ac.js",
+    "static/js/872.fa320cb8.chunk.js": "/static/js/872.fa320cb8.chunk.js",
+    "static/js/227.fd2dbaa1.chunk.js": "/static/js/227.fd2dbaa1.chunk.js",
+    "static/js/526.925a3236.chunk.js": "/static/js/526.925a3236.chunk.js",
+    "static/js/232.449fcf81.chunk.js": "/static/js/232.449fcf81.chunk.js",
+    "static/js/237.a7156c67.chunk.js": "/static/js/237.a7156c67.chunk.js",
+    "static/media/koska.JPG": "/static/media/koska.babc9b8b10684d248389.JPG",
+    "index.html": "/index.html",
+    "main.277963b6.css.map": "/static/css/main.277963b6.css.map",
+    "main.f952e9ac.js.map": "/static/js/main.f952e9ac.js.map",
+    "872.fa320cb8.chunk.js.map": "/static/js/872.fa320cb8.chunk.js.map",
+    "227.fd2dbaa1.chunk.js.map": "/static/js/227.fd2dbaa1.chunk.js.map",
+    "526.925a3236.chunk.js.map": "/static/js/526.925a3236.chunk.js.map",
+    "232.449fcf81.chunk.js.map": "/static/js/232.449fcf81.chunk.js.map",
+    "237.a7156c67.chunk.js.map": "/static/js/237.a7156c67.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4abbe626.css",
-    "static/js/main.994ae345.js"
+    "static/css/main.277963b6.css",
+    "static/js/main.f952e9ac.js"
   ]
 }
