@@ -186,8 +186,9 @@ body {
 }
 
 .spline-container {
-    width: 800px;    /* Adjust based on your sphere's size */
-    height: 800px;   /* Adjust based on your sphere's size */
+    margin-top: 20px;
+    width: 1000px;    /* Adjust based on your sphere's size */
+    height: 1000px;   /* Adjust based on your sphere's size */
     overflow: clip; /* This ensures anything outside the set width/height is hidden */
     position: relative; 
     margin: auto; /* Centering the container, can be adjusted */

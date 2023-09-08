@@ -72,7 +72,7 @@ function App() {
               <div className="contact-section">
                   <h2>CONTACT</h2>
                   <p><a href="mailto:info@koskaradio.net">info@koskaradio.net</a></p>
-                  <p><a href="https://www.instagram.com/koskaradio/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+                  <p><a href="https://www.instagram.com/koska_radio/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
                   <p><a href="https://on.soundcloud.com/LG9iX" target="_blank" rel="noopener noreferrer">Soundcloud</a></p>
           
               </div>
