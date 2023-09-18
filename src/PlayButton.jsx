@@ -17,18 +17,7 @@ function PlayButton() {
 
   useEffect(() => {
     if (isPlaying) {
-      // Make an API request to fetch current song and marquee metadata
-      fetch('http://your-azuracast-site.example.com/api/nowplaying/koska_radio')
-        .then(response => response.json())
-        .then(data => {
-          const artist = data.now_playing.song.artist || 'Unknown Artist';
-          const title = data.now_playing.song.title || 'Unknown Title';
-          const newMetadata = `${title} - ${artist}`;
-          setMetadata(newMetadata);
-        })
-        .catch(error => {
-          console.error("Error fetching now playing data:", error);
-        });
+      // Fetch current song metadata via API and update `metadata` state here
     }
   }, [isPlaying]);
 
