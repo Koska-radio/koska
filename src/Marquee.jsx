@@ -2,35 +2,44 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Marquee() {
-  const [nowPlayingData, setNowPlayingData] = useState({
-    title: 'Unknown Title',
-    artist: 'Unknown Artist',
-  });
+  const [streamInfo, setStreamInfo] = useState({ title: 'Loading...', artist: '' });
 
-  const loadNowPlaying = () => {
-    axios
-      .get('http://your-azuracast-site.example.com/api/nowplaying/koska_radio')
-      .then((response) => {
-        setNowPlayingData(response.data.now_playing.song);
-      })
-      .catch((error) => {
-        console.error(error);
+  const fetchStreamData = async () => {
+    try {
+      const response = await axios.get('http://172.232.62.146/api/nowplaying/1', {
+        params: { t: Date.now() } // To bypass cache
       });
+
+      if (response.data && response.data.now_playing && response.data.now_playing.song) {
+        const { title, artist } = response.data.now_playing.song;
+        setStreamInfo({ title, artist });
+      } else {
+        console.warn('Unexpected response structure:', response.data);
+        setStreamInfo({ title: 'Failed to fetch title', artist: '' });
+      }
+
+    } catch (error) {
+      console.error('Error fetching stream data:', error);
+      setStreamInfo({ title: 'Failed to fetch title', artist: '' });
+    }
   };
 
   useEffect(() => {
-    loadNowPlaying();
-    const intervalId = setInterval(loadNowPlaying, 15000);
+    const refreshInterval = setInterval(fetchStreamData, 15000); // Refresh every 15 seconds
+
+    // Fetch the stream data initially
+    fetchStreamData();
 
     return () => {
-      clearInterval(intervalId);
+      clearInterval(refreshInterval); // Clear the interval when the component unmounts
     };
   }, []);
 
   return (
-    <marquee>
-      {nowPlayingData.title} - {nowPlayingData.artist}
-    </marquee>
+    <div className="marquee">
+        <div className="flashing-dot"></div>
+        <span>{streamInfo.artist ? `${streamInfo.artist} - ` : ''}{streamInfo.title}</span>
+    </div>
   );
 }
 
