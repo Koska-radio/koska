@@ -29,12 +29,13 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 2%;
+    padding: 1%;
 }
 
 .play-button {
     font-size: 150px;
-    border: none; /* replaced border with none */
+    border: 2px solid whitesmoke;  /* Add a red border */
+    border-radius: 40%;  /* Make the border circular */
     background: none;
     margin-top: 50%;
     color: white;
@@ -75,7 +76,7 @@ body {
 }
 
 .koska-logo {
-    width: 100%;
+    width: 850px;
     height: auto;
     margin: 5px 200px 50px 0; /* combined margin properties */
     z-index: 10;

@@ -23,8 +23,7 @@ function App() {
           <h2>About Us</h2>
           <p>
             An online community radio based in Maastricht, dedicated to streaming the less-heard, and the off-kilter.
-            We hope to showcase (non-)locally curated sounds, boundless of genre. If it sounds good, then it is good. 
-            The studio serves as an open space for all people to enjoy music, and hang around. If you think you have 
+            We hope to showcase (non-)local sounds, carefully curated by people's taste - boundless of genre. The studio serves as an open space for all people to enjoy music, hang around and have fun. If you think you have 
             something to bring: get in touch.
           </p>
         </div>
