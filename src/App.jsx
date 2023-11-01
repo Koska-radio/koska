@@ -10,6 +10,10 @@ function App() {
       <div id="content">
         <div className="left-section">
           <PlayButton />
+          <a href="https://radio.koskaradio.net/public/koska_radio" target="_blank" rel="noopener noreferrer" className="backup-stream-link">
+    Backup Stream
+</a>
+
           <div className="spline-container">
             <Spline />
           </div>

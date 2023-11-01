@@ -5,7 +5,7 @@ body {
     background-color: black;
     color: rgb(212, 206, 206);
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     overflow-x: hidden;
 }
 
@@ -21,21 +21,22 @@ body {
     width: 100%;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 5% 5% 80px; /* combined padding properties */
+    padding: 5% 5% 80px;
 }
 
 .left-section, .right-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     padding: 1%;
+    border-right: 3px solid white;
 }
 
 .play-button {
-    font-size: 150px;
-    border: 2px solid whitesmoke;  /* Add a red border */
-    border-radius: 40%;  /* Make the border circular */
+    font-size: 100px;
+    border: 2px solid whitesmoke;
+    border-radius: 20%;
     background: none;
     margin-top: 50%;
     color: white;
@@ -45,10 +46,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 0%;
+    
 }
 
-.residents, .footer-left, .footer-right, .contact-section a, .residents a {
+.footer-left, .footer-right, .contact-section a {
     font-family: 'Space Mono';
 }
 
@@ -68,19 +69,29 @@ body {
 }
 
 .contact-section a, .residents a {
-    color: white;
+    color: rgb(212, 206, 206); 
+    font-size: 20px; 
     transition: color 0.3s ease;
     text-decoration: none;
-    margin: 3px 0 3px 20px; /* combined margin properties */
+    margin: 3px 0 3px 20px;
     display: inline-block;
+    transition: color 0.3s ease;
 }
 
+.contact-section a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: white; /* Change color on hover */
+}
+
+
 .koska-logo {
-    width: 850px;
-    height: auto;
-    margin: 5px 200px 50px 0; /* combined margin properties */
+    width: 200%; /* 50% of the viewport width */
+    max-width: 600px; /* Maximum width of 500px */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5vh 20vw 5vh 0; /* Top and right margins are relative to the viewport height and width */
     z-index: 10;
 }
+
 
 .spline-container {
     width: 500px;
@@ -101,6 +112,7 @@ footer {
     bottom: 0;
     z-index: 1;
     width: 100%;
+    border-top: 1px solid white;
 }
 
 .marquee {
@@ -114,8 +126,8 @@ footer {
 .marquee span {
     display: inline-block;
     padding-left: 100%;
-    animation: marquee 17s linear infinite;
-    font-size: 25px;
+    animation: marquee 16s linear infinite;
+    font-size: 20px;
 }
 
 @keyframes marquee {
@@ -134,4 +146,40 @@ footer {
 @keyframes flash {
     from { opacity: 0.8; }
     to   { opacity: 0.1; }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    #content {
+        flex-direction: column;
+    }
+
+    .play-button {
+        font-size: 80px;
+        width: 100px;
+        height: 100px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .marquee span {
+        font-size: 18px;
+    }
+}
+
+.backup-stream-link {
+    display: block;
+    font-size: 20px; 
+    color: rgb(212, 206, 206); 
+    text-decoration: none; 
+    margin-top: 20px; 
+    text-align: center; /* Center the text */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.backup-stream-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: white; /* Change color on hover */
 }

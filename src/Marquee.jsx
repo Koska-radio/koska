@@ -6,7 +6,7 @@ function Marquee() {
 
   const fetchStreamData = async () => {
     try {
-      const response = await axios.get('http://172.232.62.146/api/nowplaying/1', {
+      const response = await axios.get('https://radio.koskaradio.net/api/nowplaying/1', {
         params: { t: Date.now() } // To bypass cache
       });
 
@@ -25,7 +25,7 @@ function Marquee() {
   };
 
   useEffect(() => {
-    const refreshInterval = setInterval(fetchStreamData, 15000); // Refresh every 15 seconds
+    const refreshInterval = setInterval(fetchStreamData, 5000); // Refresh every 15 seconds
 
     // Fetch the stream data initially
     fetchStreamData();
