@@ -19,93 +19,140 @@ body {
 #content {
     display: flex;
     width: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 5% 5% 80px;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 1% 1% 1% 1%;
+    width: calc(100% - 35px); 
 }
 
 .left-section, .right-section {
+    background-color: #e6e4e4;
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    padding: 1%;
-    border-right: 3px solid white;
+    padding: 5%;
+    border: 1px solid #333;
+}
+
+.right-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns children to the left */
+    justify-content: space-between; /* Distributes space between spline-container and contact-section */
+    position: relative;
+    padding: 5%;
+    border: 1px solid #333;
+}
+
+.media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Horizontally center children */
+    justify-content: flex-start; /* Align children to the top */
+}
+
+.backup-stream-link {
+    display: block;
+    font-size: 20px; 
+    color: #333;
+    text-decoration: none; 
+    margin-top: 20px; 
+    text-align: center;
+    transition: color 0.3s ease;
 }
 
 .play-button {
     font-size: 100px;
-    border: 2px solid whitesmoke;
+    border: 2px solid #333;
     border-radius: 20%;
     background: none;
-    margin-top: 50%;
-    color: white;
+    margin-top: 10px; /* Adjust this value to position the button closer to the top */
+    color: #333;
     cursor: pointer;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #333; 
+}
+
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 16s linear infinite;
+    font-size: 20px;
+    color: #333;
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+.koska-logo {
+    width: 120%;
+    max-width: 550px;
+    height: auto;
+    margin: 5vh 0;
+    z-index: 10;
+  
+}
+
+.contact-section, .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-section h2 {
+    color: #333;
+    align-self: flex-start; /* Aligns the h2 to the left of its container */
+    font-size: 30px;
+    margin-bottom: 10px;
     
 }
 
-.footer-left, .footer-right, .contact-section a {
-    font-family: 'Space Mono';
-}
-
-.residents, .footer-left, .footer-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-}
-
-.residents h2, .contact-section h2, .footer-left h2 {
-    font-family: 'Rock Salt', cursive;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.contact-section a, .residents a {
-    color: rgb(212, 206, 206); 
+.contact-section a {
+    color:#333; 
     font-size: 20px; 
-    transition: color 0.3s ease;
     text-decoration: none;
-    margin: 3px 0 3px 20px;
+    margin: 2px 0; /* Reduced spacing between links */
     display: inline-block;
     transition: color 0.3s ease;
 }
 
-.contact-section a:hover {
-    text-decoration: underline; /* Add underline on hover */
-    color: white; /* Change color on hover */
+.contact-section a:hover, .backup-stream-link:hover {
+    text-decoration: underline;
+    color: rgb(30, 29, 29);
 }
-
-
-.koska-logo {
-    width: 200%; /* 50% of the viewport width */
-    max-width: 600px; /* Maximum width of 500px */
-    height: auto; /* Maintain aspect ratio */
-    margin: 5vh 20vw 5vh 0; /* Top and right margins are relative to the viewport height and width */
-    z-index: 10;
-}
-
 
 .spline-container {
     width: 500px;
     height: 500px;
-    margin-top: 50px;
+    margin: 0 auto; 
     overflow: hidden;
+ 
 }
 
 footer {
     display: flex;
-    height: 80px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     position: relative;
@@ -115,38 +162,55 @@ footer {
     border-top: 1px solid white;
 }
 
-.marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    top: 20px;
-    width: 100%;
+.footer-left {
+    flex: 1; /* This will make it take up the remaining space after footer-right */
+    padding-right: 20px; /* Some padding to ensure it doesn't touch footer-right */
+    margin-left: 2%;
 }
 
-.marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 16s linear infinite;
-    font-size: 20px;
+
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%; /* Adjust this value if needed */
+    padding: 20px;
 }
 
-@keyframes marquee {
-    0%   { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.flashing-dot {
-    width: 30px;
-    height: 30px;
-    background-color: red;
-    margin-right: 40px;
-    animation: flash 1s infinite alternate;
+.footer-right img {
+    max-width: 50%; 
+    height: auto; 
+    display: block; 
+    margin-bottom: 20px; 
 }
 
-@keyframes flash {
-    from { opacity: 0.8; }
-    to   { opacity: 0.1; }
+.footer-right p {
+    margin: 0;
+    text-align: center;
+    font-size: 18px; /* Adjust as needed */
 }
+
+.footer-right a {
+    color: rgb(212, 206, 206); 
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
@@ -164,22 +228,8 @@ footer {
         flex-direction: column;
     }
 
-    .marquee span {
-        font-size: 18px;
+    .koska-logo {
+        width: 80%;
+        margin: 2vh 0;
     }
-}
-
-.backup-stream-link {
-    display: block;
-    font-size: 20px; 
-    color: rgb(212, 206, 206); 
-    text-decoration: none; 
-    margin-top: 20px; 
-    text-align: center; /* Center the text */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-.backup-stream-link:hover {
-    text-decoration: underline; /* Add underline on hover */
-    color: white; /* Change color on hover */
 }
