@@ -25,7 +25,7 @@ function Marquee() {
   };
 
   useEffect(() => {
-    const refreshInterval = setInterval(fetchStreamData, 5000); // Refresh every 15 seconds
+    const refreshInterval = setInterval(fetchStreamData, 5000); 
 
     // Fetch the stream data initially
     fetchStreamData();
