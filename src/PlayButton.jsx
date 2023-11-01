@@ -21,7 +21,7 @@ function PlayButton() {
       <button className="play-button" onClick={handlePlayToggle}>
         {isPlaying ? '❚❚' : '▶'}
       </button>
-      <audio ref={audioRef} src="http://172.232.62.146:8000/radio.mp3" />
+      <audio ref={audioRef} src="https://radio.koskaradio.net:8000/radio.mp3" />
       <Marquee/>
     </div>
   );
