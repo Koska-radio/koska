@@ -1,235 +1,255 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Rubik+80s+Fade&family=Handjet:wght@400;900&family=Gloria+Hallelujah&family=Rowdies:wght@300&family=Bacasime+Antique&family=Rock+Salt&family=Space+Mono:ital@0;1');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Rubik+80s+Fade&family=Handjet:wght@400;900&family=Gloria+Hallelujah&family=Rowdies:wght@300&family=Bacasime+Antique&family=Rock+Salt&family=Space+Mono:ital@0;1");
 
 body {
-    font-family: 'Space Mono', monospace; 
-    background-color: black;
-    color: rgb(212, 206, 206);
-    margin: 0;
-    padding: 0 10px;
-    overflow-x: hidden;
+  font-family: "Space Mono", monospace;
+  background-color: black;
+  color: rgb(212, 206, 206);
+  margin: 0;
+  padding: 0 10px;
+  overflow-x: hidden;
 }
 
 .main-container {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #content {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-    justify-content: flex-start;
-    padding: 1% 1% 1% 1%;
-    width: calc(100% - 35px); 
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 1% 1% 1% 1%;
+  width: calc(100% - 35px);
 }
 
-.left-section, .right-section {
-    background-color: #e6e4e4;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    padding: 5%;
-    border: 1px solid #333;
+.left-section,
+.right-section {
+  background-color: #e6e4e4;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding: 5%;
+  border: 1px solid #333;
 }
 
 .right-section {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: flex-start; /* Aligns children to the left */
-    justify-content: space-between; /* Distributes space between spline-container and contact-section */
-    position: relative;
-    padding: 5%;
-    border: 1px solid #333;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns children to the left */
+  justify-content: space-between; /* Distributes space between spline-container and contact-section */
+  position: relative;
+  padding: 5%;
+  border: 1px solid #333;
 }
 
 .media-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Horizontally center children */
-    justify-content: flex-start; /* Align children to the top */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Horizontally center children */
+  justify-content: flex-start; /* Align children to the top */
 }
 
 .backup-stream-link {
-    display: block;
-    font-size: 20px; 
-    color: #333;
-    text-decoration: none; 
-    margin-top: 20px; 
-    text-align: center;
-    transition: color 0.3s ease;
+  display: block;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  margin-top: 20px;
+  text-align: center;
+  transition: color 0.3s ease;
 }
 
 .play-button {
-    font-size: 100px;
-    border: 2px solid #333;
-    border-radius: 20%;
-    background: none;
-    margin-top: 10px; /* Adjust this value to position the button closer to the top */
-    color: #333;
-    cursor: pointer;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 100px;
+  border: 2px solid #333;
+  border-radius: 20%;
+  background: none;
+  margin-top: 10px; /* Adjust this value to position the button closer to the top */
+  color: #333;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #333; 
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #333;
 }
 
-
 .marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 16s linear infinite;
-    font-size: 20px;
-    color: #333;
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 16s linear infinite;
+  font-size: 20px;
+  color: #333;
 }
 
 @keyframes marquee {
-    0%   { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .koska-logo {
-    width: 120%;
-    max-width: 550px;
-    height: auto;
-    margin: 5vh 0;
-    z-index: 10;
-  
+  width: 120%;
+  max-width: 550px;
+  height: auto;
+  margin: 5vh 0;
+  z-index: 10;
 }
 
-.contact-section, .footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.contact-section,
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contact-section h2 {
-    color: #333;
-    align-self: flex-start; /* Aligns the h2 to the left of its container */
-    font-size: 30px;
-    margin-bottom: 10px;
-    
+  color: #333;
+  align-self: flex-start; /* Aligns the h2 to the left of its container */
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .contact-section a {
-    color:#333; 
-    font-size: 20px; 
-    text-decoration: none;
-    margin: 2px 0; /* Reduced spacing between links */
-    display: inline-block;
-    transition: color 0.3s ease;
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 2px 0; /* Reduced spacing between links */
+  display: inline-block;
+  transition: color 0.3s ease;
 }
 
-.contact-section a:hover, .backup-stream-link:hover {
-    text-decoration: underline;
-    color: rgb(30, 29, 29);
+.contact-section a:hover,
+.backup-stream-link:hover {
+  text-decoration: underline;
+  color: rgb(30, 29, 29);
 }
 
 .spline-container {
-    width: 500px;
-    height: 500px;
-    margin: 0 auto; 
-    overflow: hidden;
- 
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    position: relative;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-    border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  border-top: 1px solid white;
 }
 
 .footer-left {
-    flex: 1; /* This will make it take up the remaining space after footer-right */
-    padding-right: 20px; /* Some padding to ensure it doesn't touch footer-right */
-    margin-left: 2%;
+  flex: 1; /* This will make it take up the remaining space after footer-right */
+  padding-right: 20px; /* Some padding to ensure it doesn't touch footer-right */
+  margin-left: 2%;
 }
 
+.soundcloud-link {
+  color: white; /* Set your desired default color */
+  text-decoration: none; /* Removes underline */
+}
 
-
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40%; /* Adjust this value if needed */
-    padding: 20px;
+.soundcloud-link:hover {
+  text-decoration: underline;
+  color: white;
 }
 
 .footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%; /* Adjust this value if needed */
+  padding: 20px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .footer-right img {
-    max-width: 50%; 
-    height: auto; 
-    display: block; 
-    margin-bottom: 20px; 
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .footer-right p {
-    margin: 0;
-    text-align: center;
-    font-size: 18px; /* Adjust as needed */
+  margin: 0;
+  text-align: center;
+  font-size: 18px; /* Adjust as needed */
 }
 
 .footer-right a {
-    color: rgb(212, 206, 206); 
-    transition: color 0.3s ease;
-    text-decoration: none;
+  color: rgb(212, 206, 206);
+  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .footer-right a:hover {
-    text-decoration: underline;
-    color: white;
+  text-decoration: underline;
+  color: white;
 }
 
-
 /* Mobile-specific styles */
-@media (max-width: 768px) {
-    #content {
-        flex-direction: column;
-    }
+@media (max-width: 1000px) {
+  #content {
+    flex-direction: column;
+    width: 100%; /* Ensure full width */
+  }
 
-    .play-button {
-        font-size: 80px;
-        width: 100px;
-        height: 100px;
-    }
+  .play-button {
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    margin-top: 35px; /* Center the button if necessary */
+  }
 
-    footer {
-        flex-direction: column;
-    }
+  footer {
+    flex-direction: column;
+    width: 100%; /* Ensure full width */
+  }
 
-    .koska-logo {
-        width: 80%;
-        margin: 2vh 0;
-    }
+  .koska-logo {
+    width: 100%;
+    margin: 2vh auto; 
+    display: block; 
+  }
+
+
+  .spline-container, .contact-section, .footer-left, .footer-right {
+    width: 100%; 
+    padding: 0 15px; 
+  }
 }

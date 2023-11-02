@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import Marquee from './Marquee';
+import React, { useState, useRef } from "react";
+import Marquee from "./Marquee";
 
 function PlayButton() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,15 +14,13 @@ function PlayButton() {
     setIsPlaying(!isPlaying);
   };
 
-
-
   return (
     <div>
       <button className="play-button" onClick={handlePlayToggle}>
-        {isPlaying ? '❚❚' : '▶'}
+        {isPlaying ? "❚❚" : "▶"}
       </button>
       <audio ref={audioRef} src="https://radio.koskaradio.net:8000/radio.mp3" />
-      <Marquee/>
+      <Marquee />
     </div>
   );
 }
