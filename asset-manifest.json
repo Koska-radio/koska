@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.f5ebaad9.css",
-    "main.js": "/static/js/main.d88bca00.js",
+    "main.css": "/static/css/main.d051024d.css",
+    "main.js": "/static/js/main.2bf8ecf8.js",
     "static/js/872.fa320cb8.chunk.js": "/static/js/872.fa320cb8.chunk.js",
     "static/js/227.fd2dbaa1.chunk.js": "/static/js/227.fd2dbaa1.chunk.js",
     "static/js/526.925a3236.chunk.js": "/static/js/526.925a3236.chunk.js",
     "static/js/232.449fcf81.chunk.js": "/static/js/232.449fcf81.chunk.js",
     "static/js/237.a7156c67.chunk.js": "/static/js/237.a7156c67.chunk.js",
-    "static/media/koska.JPG": "/static/media/koska.babc9b8b10684d248389.JPG",
+    "static/media/koska.webp": "/static/media/koska.5f5626efb87509732889.webp",
+    "static/media/DRAGON KOSKA (1).webp": "/static/media/DRAGON KOSKA (1).edc58a00535d3a555ab9.webp",
     "index.html": "/index.html",
-    "main.f5ebaad9.css.map": "/static/css/main.f5ebaad9.css.map",
-    "main.d88bca00.js.map": "/static/js/main.d88bca00.js.map",
+    "main.d051024d.css.map": "/static/css/main.d051024d.css.map",
+    "main.2bf8ecf8.js.map": "/static/js/main.2bf8ecf8.js.map",
     "872.fa320cb8.chunk.js.map": "/static/js/872.fa320cb8.chunk.js.map",
     "227.fd2dbaa1.chunk.js.map": "/static/js/227.fd2dbaa1.chunk.js.map",
     "526.925a3236.chunk.js.map": "/static/js/526.925a3236.chunk.js.map",
@@ -18,7 +19,7 @@
     "237.a7156c67.chunk.js.map": "/static/js/237.a7156c67.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5ebaad9.css",
-    "static/js/main.d88bca00.js"
+    "static/css/main.d051024d.css",
+    "static/js/main.2bf8ecf8.js"
   ]
 }
