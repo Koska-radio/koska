@@ -13,7 +13,7 @@ function Marquee() {
         "https://radio.koskaradio.net/api/nowplaying/1",
         {
           params: { t: Date.now() }, // To bypass cache
-        }
+        },
       );
 
       if (

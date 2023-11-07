@@ -80,6 +80,28 @@ body {
   justify-content: center;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-circle {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+}
+
 .marquee {
   overflow: hidden;
   white-space: nowrap;
@@ -239,17 +261,37 @@ footer {
   footer {
     flex-direction: column;
     width: 100%; /* Ensure full width */
+    margin-bottom: 100px;
   }
 
   .koska-logo {
     width: 100%;
-    margin: 2vh auto; 
-    display: block; 
+    margin: 2vh auto;
+    display: block;
   }
 
-
-  .spline-container, .contact-section, .footer-left, .footer-right {
-    width: 100%; 
-    padding: 0 15px; 
+  .spline-container,
+  .contact-section,
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    padding: 0 15px;
   }
 }
+
+.schedule-widget-container {
+  display: flex;
+  justify-content: center; /* This will center the iframe horizontally */
+  padding-left: 45px; /* Adjust this to align with the footer-left content */
+  padding-right: 45px; /* Symmetric padding for aesthetics, adjust as needed */
+  margin-top: 30px; /* Space above the widget, adjust as needed */
+  margin-bottom: 20px; /* Space below the widget, adjust as needed */
+}
+
+.schedule-iframe {
+  width: 100%; /* Use 100% to make it responsive */
+  min-height: 500px; /* Minimum height for the iframe */
+  border: none; /* Remove border */
+  background-color: transparent; /* Set the background to transparent */
+}
+

@@ -1,5 +1,5 @@
-import React from 'react';
-import SplineReact from '@splinetool/react-spline';
+import React from "react";
+import SplineReact from "@splinetool/react-spline";
 
 const Spline = () => {
   // This state will keep track of whether the window width is greater than 1000px
@@ -10,9 +10,9 @@ const Spline = () => {
   };
 
   React.useEffect(() => {
-    window.addEventListener('resize', updateMedia);
+    window.addEventListener("resize", updateMedia);
     // Remove the event listener on cleanup
-    return () => window.removeEventListener('resize', updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
   });
 
   return (
