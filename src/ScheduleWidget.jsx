@@ -1,6 +1,5 @@
-
-import React from 'react';
-import './style.css'; 
+import React from "react";
+import "./style.css";
 
 const ScheduleWidget = () => {
   return (
@@ -8,9 +7,8 @@ const ScheduleWidget = () => {
       <iframe
         src="https://radio.koskaradio.net/public/koska_radio/schedule/embed"
         title="Schedule Widget"
-        className="schedule-iframe" 
-      >
-      </iframe>
+        className="schedule-iframe"
+      ></iframe>
     </div>
   );
 };

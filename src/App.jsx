@@ -5,7 +5,7 @@ import PlayButton from "./PlayButton";
 import Spline from "./Spline";
 import Marquee from "./Marquee";
 import footerlogo from "./images/DRAGON KOSKA (1).webp";
-import ScheduleWidget from './ScheduleWidget';
+import ScheduleWidget from "./ScheduleWidget";
 
 function App() {
   return (
